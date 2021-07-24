@@ -41,3 +41,7 @@ TODO: @amurani
 ```
 
 - Use the QMK Toolkit to flash the keyboard
+
+### Credit
+
+This repository is based on the one under [siketyan/lily58-keymap](https://github.com/siketyan/lily58-keymap) and I thought it would be right to make a note of that.
