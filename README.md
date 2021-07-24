@@ -34,8 +34,8 @@ TODO: @amurani
 ➜ qmk compile -kb lily58 -km amurani
 ```
 
-- Flush the keymap to the connected board
+- Confirm that the keymap has been compiled to a hex file:
 
 ```bash
-➜ sudo make lily58:amurani:avrdude
+➜ ls -l | grep lily58_rev1_amurani.hex
 ```
