@@ -1,7 +1,5 @@
 # Lily58 Layout
 
-TODO: @amurani
-
 ### Setup
 
 - Clone the qmk firmware repository
