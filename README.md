@@ -39,3 +39,5 @@ TODO: @amurani
 ```bash
 ➜ ls -l | grep lily58_rev1_amurani.hex
 ```
+
+- Use the QMK Toolkit to flash the keyboard
