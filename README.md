@@ -32,6 +32,12 @@
 ➜ qmk compile -kb lily58 -km amurani
 ```
 
+or run the clean command first incase you get weird compilation failures unrelated to your keymap changes
+
+```bash
+➜  qmk clean -a && qmk compile -kb lily58 -km amurani
+```
+
 - Confirm that the keymap has been compiled to a hex file:
 
 ```bash
