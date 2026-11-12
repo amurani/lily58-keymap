@@ -46,6 +46,21 @@ or run the clean command first incase you get weird compilation failures unrelat
 
 - Use the QMK Toolkit to flash the keyboard
 
+### Layers
+
+![Keymap](keymap-drawer/lily58.svg)
+
+The Adjust layer (Lower + Raise) is left out because it's empty while RGB is disabled.
+
+Regenerate the diagram after changing `keymap.c` using [keymap-drawer](https://github.com/caksoylar/keymap-drawer)
+
+```bash
+➜ pipx install keymap-drawer
+➜ python3 keymap-drawer/c2json.py keymap.c > /tmp/lily58.json
+➜ keymap -c keymap-drawer/config.yaml parse -q /tmp/lily58.json -c 12 -l default lower raise adjust > /tmp/lily58.yaml
+➜ keymap -c keymap-drawer/config.yaml draw /tmp/lily58.yaml -s default lower raise > keymap-drawer/lily58.svg
+```
+
 ### Credit
 
 This repository is based on the one under [siketyan/lily58-keymap](https://github.com/siketyan/lily58-keymap) and I thought it would be right to make a note of that.
