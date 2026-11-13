@@ -11,9 +11,7 @@ RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 SWAP_HANDS_ENABLE = no      # Enable one-hand typing
 OLED_ENABLE = yes           # OLED display
 
-SRC +=  ./lib/rgb_state_reader.c \
-        ./lib/layer_state_reader.c \
+SRC +=  ./lib/layer_state_reader.c \
         ./lib/logo_reader.c \
-        ./lib/keylogger.c \
-		./oled_key_heatmap.c \
+        ./lib/keylogger.c
 

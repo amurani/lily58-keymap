@@ -44,13 +44,19 @@ or run the clean command first incase you get weird compilation failures unrelat
 ➜ ls -l | grep lily58_rev1_amurani.hex
 ```
 
-- Use the QMK Toolkit to flash the keyboard
+- Flash the keyboard. This compiles too, then waits for you to press the reset button (or Lower + Raise + Esc once this keymap is already on the board)
+
+```bash
+➜ qmk flash -kb lily58 -km amurani
+```
+
+- Repeat for the other half (each half has its own controller)
 
 ### Layers
 
 ![Keymap](keymap-drawer/lily58.svg)
 
-The Adjust layer (Lower + Raise) is left out because it's empty while RGB is disabled.
+The Adjust layer (Lower + Raise) only has `QK_BOOT` on the Esc key, which puts the board into flashing mode.
 
 Regenerate the diagram after changing `keymap.c` using [keymap-drawer](https://github.com/caksoylar/keymap-drawer)
 
@@ -58,7 +64,7 @@ Regenerate the diagram after changing `keymap.c` using [keymap-drawer](https://g
 ➜ pipx install keymap-drawer
 ➜ python3 keymap-drawer/c2json.py keymap.c > /tmp/lily58.json
 ➜ keymap -c keymap-drawer/config.yaml parse -q /tmp/lily58.json -c 12 -l default lower raise adjust > /tmp/lily58.yaml
-➜ keymap -c keymap-drawer/config.yaml draw /tmp/lily58.yaml -s default lower raise > keymap-drawer/lily58.svg
+➜ keymap -c keymap-drawer/config.yaml draw /tmp/lily58.yaml > keymap-drawer/lily58.svg
 ```
 
 ### Credit
